@@ -1,0 +1,51 @@
+import type { Task } from "../types";
+ export const Tasks: Task[]= [    
+  {
+    id: "1",
+    title: "Learn React",
+    description: "Practice TypeScript props",
+    status: "pending",
+    priority: "high",
+    dueDate: "2024-12-31",
+  },
+  {
+    id: "2",
+    title: "Build UI",
+    description: "Create components",
+    status: "in-progress",
+    priority: "medium",
+    dueDate: "2026-03-01",
+  },
+  {
+    id: "3",
+    title: "Write Tests",
+    description: "Test app features",
+    status: "completed",
+    priority: "low",
+    dueDate: "2026-02-10",
+  },
+  {
+    id: "4",
+    title: "Fix Bugs",
+    description: "Resolve filtering issues",
+    status: "pending",
+    priority: "medium",
+    dueDate: "2026-03-08",
+  },
+  {
+    id: "5",
+    title: "Refactor Code",
+    description: "Improve component structure",
+    status: "in-progress",
+    priority: "low",
+    dueDate: "2026-03-12",
+  },
+  {
+    id: "6",
+    title: "Deploy App",
+    description: "Push to production",
+    status: "pending",
+    priority: "high",
+    dueDate: "2026-03-20",
+  },
+];
