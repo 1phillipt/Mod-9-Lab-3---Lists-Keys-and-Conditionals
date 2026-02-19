@@ -36,6 +36,7 @@ function TaskPage() {
 
   return (
     <>
+   
       <TaskFilter
         onFilterChange={(filters) => {
           if (filters.status !== undefined) {
@@ -46,7 +47,7 @@ function TaskPage() {
           }
         }}
       />
-
+   
       <TaskList
         tasks={filteredTasks}
         onStatusChange={onStatusChange}
