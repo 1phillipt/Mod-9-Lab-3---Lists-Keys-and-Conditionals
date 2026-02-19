@@ -12,19 +12,19 @@ function taskPage() {
 
   const[status, setStatus] = useState<TaskStatus>('pending');
 
-    console.log(tasks); 
-
+    
+  //changes the status of the task
    const onStatusChange = (taskId: string, newStatus: TaskStatus) => {
-      setTasks(() => 
-      tasks.map((task) => 
+      setTasks((prev) => 
+      prev.map((task) => 
         task.id === taskId ? {...task, status: newStatus} : task
        
-      ));console.log(tasks); 
+      ));
    };
 
    const onDelete = (taskId: string) => {
-    setTasks(() => 
-    tasks.filter((task) => task.id !== taskId ));
+    setTasks((prev) => 
+    prev.filter((task) => task.id !== taskId ));
    }
 
   return (
