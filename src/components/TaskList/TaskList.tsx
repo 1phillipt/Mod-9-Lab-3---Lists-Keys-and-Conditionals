@@ -9,7 +9,14 @@ import TaskItem from "../TaskItem/TaskItem";
 export function TaskList({tasks, onStatusChange, onDelete}: TaskListProps) {
 
 return tasks.map((task) => (
-  <div key={task.id}>
-    <h3>{TaskItem({task, onStatusChange, onDelete})}</h3>   
-  </div>
+  <div className="task-list">
+      {tasks.map((task) => (
+        <TaskItem
+          key={task.id}
+          task={task}
+          onStatusChange={onStatusChange}
+          onDelete={onDelete}
+        />
+      ))}
+    </div>
 ))}
