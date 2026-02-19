@@ -26,13 +26,18 @@ function TaskPage() {
     setTasks((prev) => prev.filter((task) => task.id !== taskId));
   };
 
-  const filteredTasks = tasks.filter((task) => {
-    const statusMatch = status === "all" || task.status === status;
+//   const filteredTasks = tasks.filter((task) => {
+//     const statusMatch = status === "all" || task.status === status;
 
-    const priorityMatch = priority === "all" || task.priority === priority;
+//     const priorityMatch = priority === "all" || task.priority === priority;
 
-    return statusMatch && priorityMatch;
-  });
+//     return statusMatch && priorityMatch;
+//   });
+
+const filteredTasks = tasks
+  .filter(task => status === "all" || task.status === status)
+  .filter(task => priority === "all" || task.priority === priority);
+
 
  return (
     <div className="app-container">
