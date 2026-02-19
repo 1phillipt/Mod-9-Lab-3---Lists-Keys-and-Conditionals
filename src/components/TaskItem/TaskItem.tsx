@@ -22,19 +22,38 @@ export default function TaskItem({task, onDelete, onStatusChange}: TaskItemProps
   return (
     <div className="task-card">
 
+  <div className="task-header">
+    <div>
       <p className="task-title">{task.title}</p>
       <p className="task-description">{task.description}</p>
-      <p>{task.description}</p>
-      <p>{task.id}</p>
-      <p>{task.dueDate}</p>
+    </div>
 
-      <select name="status" value={task.status} onChange={(e) => onStatusChange(task.id, e.target.value as TaskStatus)}>
+    <div className="task-actions">
+      <select
+        value={task.status}
+        onChange={(e) =>
+          onStatusChange(task.id, e.target.value as TaskStatus)
+        }
+      >
         <option value="pending">Pending</option>
         <option value="in-progress">In Progress</option>
         <option value="completed">Completed</option>
       </select>
 
-      <button type="button" onClick={() => onDelete(task.id)}>Delete</button>
+      <button onClick={() => onDelete(task.id)}>Delete</button>
     </div>
+  </div>
+
+  <div className="task-footer">
+    <p className={`priority ${task.priority}`}>
+      Priority: {task.priority}
+    </p>
+    <p className="due-date">
+      Due: {task.dueDate}
+    </p>
+  </div>
+
+</div>
+
   );
 }

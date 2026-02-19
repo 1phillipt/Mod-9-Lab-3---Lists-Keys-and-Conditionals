@@ -6,7 +6,7 @@ export interface Task {
   title: string;
   description: string;
   status: TaskStatus;
-  priority: 'low' | 'medium' | 'high' | 'all';
+  priority: 'low' | 'medium' | 'high';
   dueDate: string;
 }
  

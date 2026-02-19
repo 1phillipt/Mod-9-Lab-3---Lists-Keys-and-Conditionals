@@ -12,8 +12,6 @@ type PriorityLevel = "low" | "medium" | "high";
 export function TaskFilter({ onFilterChange }: TaskFilterProps) {
   return (
     <>
-    <body>
-    <header>Completed Example</header>
     <div id="filterByStatusAndPriority">
       <select id="status" onChange={(e) => onFilterChange({ status: e.target.value as TaskStatus })}
       >
@@ -31,7 +29,6 @@ export function TaskFilter({ onFilterChange }: TaskFilterProps) {
 
       </select>
     </div>
-    </body>
     </>
   );
 }

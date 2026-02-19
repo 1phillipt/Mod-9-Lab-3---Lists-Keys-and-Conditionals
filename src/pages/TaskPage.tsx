@@ -34,27 +34,29 @@ function TaskPage() {
     return statusMatch && priorityMatch;
   });
 
-  return (
-    <>
-   
-      <TaskFilter
-        onFilterChange={(filters) => {
-          if (filters.status !== undefined) {
-            setStatus(filters.status);
-          }
-          if (filters.priority !== undefined) {
-            setPriority(filters.priority);
-          }
-        }}
-      />
-   
-      <TaskList
-        tasks={filteredTasks}
-        onStatusChange={onStatusChange}
-        onDelete={onDelete}
-      />
-    </>
-  );
+ return (
+    <div className="app-container">
+    <header>Completed Example</header>
+
+    <TaskFilter
+      onFilterChange={(filters) => {
+        if (filters.status !== undefined) {
+          setStatus(filters.status);
+        }
+        if (filters.priority !== undefined) {
+          setPriority(filters.priority);
+        }
+      }}
+    />
+
+    <TaskList
+      tasks={filteredTasks}
+      onStatusChange={onStatusChange}
+      onDelete={onDelete}
+    />
+  </div>
+);
+
 }
 
 export default TaskPage;
