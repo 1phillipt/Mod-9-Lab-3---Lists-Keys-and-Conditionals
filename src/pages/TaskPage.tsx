@@ -41,7 +41,7 @@ const filteredTasks = tasks
 
  return (
     <div className="app-container">
-    <header>Completed Example</header>
+    <header>Tasks</header>
 
     <TaskFilter
       onFilterChange={(filters) => {

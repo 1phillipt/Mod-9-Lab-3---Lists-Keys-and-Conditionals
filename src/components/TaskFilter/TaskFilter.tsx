@@ -11,24 +11,33 @@ type PriorityLevel = "low" | "medium" | "high";
 
 export function TaskFilter({ onFilterChange }: TaskFilterProps) {
   return (
-    <>
-    <div id="filterByStatusAndPriority">
-      <select id="status" onChange={(e) => onFilterChange({ status: e.target.value as TaskStatus })}
-      >
+   <>
+
+    <div id="filterByStatusAndPriority" >
+       <div>
+        <p>Status</p>
+       
+         <select id="status" onChange={(e) => onFilterChange({ status: e.target.value as TaskStatus })}
+          >
         <option value="all" defaultChecked>All</option>
         <option value="pending">pending</option>
         <option value="in-progress">in-progress</option>
         <option value="completed">completed</option>
-      </select>
-
+         </select>
+       </div>
+     
+  
+  <div>
+       <p>Priority</p>
       <select  id="priority" onChange={(e) => onFilterChange({ priority: e.target.value as PriorityLevel })}>
          <option value="all">All</option>
          <option value="high">high</option>
          <option value="medium">medium</option>
          <option value="low">low</option>
-
-      </select>
-    </div>
+         </select>
+ </div>
+ </div>
+    
     </>
   );
 }
