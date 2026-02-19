@@ -47,5 +47,5 @@ import type { Task } from "../types";
     status: "pending",
     priority: "high",
     dueDate: "2026-03-20",
-  },
+  }
 ];

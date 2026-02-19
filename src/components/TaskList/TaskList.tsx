@@ -1,14 +1,10 @@
 import type { Task, TaskListProps } from "../../types";
 import TaskItem from "../TaskItem/TaskItem";
 
-// export interface TaskListProps {
-//   tasks: Task[];
-//   onStatusChange: (taskId: string, newStatus: TaskStatus) => void;
-//   onDelete: (taskId: string) => void;
-// }
+
 export function TaskList({tasks, onStatusChange, onDelete}: TaskListProps) {
 
-return tasks.map((task) => (
+return (
   <div className="task-list">
       {tasks.map((task) => (
         <TaskItem
@@ -19,4 +15,4 @@ return tasks.map((task) => (
         />
       ))}
     </div>
-))}
+)}

@@ -22,10 +22,11 @@ export default function TaskItem({task, onDelete, onStatusChange}: TaskItemProps
   return (
     <div className="task-card">
 
-      <h3 className="task-title">{task.title}</h3>
+      <p className="task-title">{task.title}</p>
       <p className="task-description">{task.description}</p>
-      <h2>{task.description}</h2>
-      <h3>{task.dueDate}</h3>
+      <p>{task.description}</p>
+      <p>{task.id}</p>
+      <p>{task.dueDate}</p>
 
       <select name="status" value={task.status} onChange={(e) => onStatusChange(task.id, e.target.value as TaskStatus)}>
         <option value="pending">Pending</option>
